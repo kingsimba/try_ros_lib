@@ -49,8 +49,11 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>ros_cpp</build_depend>
   <build_depend>try_lib</build_depend>
+  <build_export_depend>ros_cpp</build_export_depend>
   <build_export_depend>try_lib</build_export_depend>
+  <exec_depend>ros_cpp</exec_depend>
   <exec_depend>try_lib</exec_depend>
 
 

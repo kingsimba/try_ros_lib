@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES use_lib
-#  CATKIN_DEPENDS try_lib
+#  CATKIN_DEPENDS ros_cpp try_lib
 #  DEPENDS system_lib
 )
 
@@ -115,15 +115,9 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
+# include
   ${catkin_INCLUDE_DIRS}
 )
-
-message("XXXXXXXXXXX ${catkin_INCLUDE_DIRS} XXX")
-
-get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
-foreach(dir ${dirs})
-  message(STATUS "dir='${dir}'")
-endforeach()
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -138,7 +132,7 @@ endforeach()
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/use_lib_node.cpp)
+add_executable(${PROJECT_NAME}_node use_lib_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
