@@ -1,3 +1,3 @@
-#include <ros/time.h>
+#include <ros/ros.h>
 
 const char *getName();
